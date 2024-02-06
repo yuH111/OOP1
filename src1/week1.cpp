@@ -47,6 +47,8 @@ void checknumBig(int a[], int n)
             max = a[i];
         }
     }
+    //
+    //
     cout << "\nNumber max: " << max;
 }
 void sortNum(int a[], int n){
