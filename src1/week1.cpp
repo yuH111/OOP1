@@ -53,6 +53,7 @@ void checknumBig(int a[], int n)
 main()
 {
     int a[1000];
+    //
     int n;
     cout << "Enter many Number do you want: ";
     cin >> n;
