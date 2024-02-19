@@ -54,7 +54,7 @@ public:
                 cout << "Sinh vien khong ton tai. Vui long nhap lai." << endl;
             }
         } while (choice != 0);
-    }
+    }//
 };
 
 int main() {
