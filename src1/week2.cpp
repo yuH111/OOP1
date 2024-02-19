@@ -1,76 +1,65 @@
 #include <iostream>
-#include <string> 
+#include <string>
 
 using namespace std;
 
 class Student {
 private:
-    string name; 
+    string name;
     int ID;
     double GPA;
+    int numStudents;
+
 public:
-    void input() { 
-        cout << "Enter name Student: ";
+    void input() {
+        cout << "Nhap vao TEN sv: ";
         cin >> name;
-        cout << "Enter ID Student: ";
+        cout << "Nhap vao ID sv: ";
         cin >> ID;
-        cout << "Enter GPA Student: ";
+        cout << "Nhap vao GPA sv: ";
         cin >> GPA;
     }
 
-    void output() { 
-        cout << "Student name: " << name << endl;
-        cout << "ID Student: " << ID << endl;
-        cout << "GPA Student: " << GPA << endl;
+    void output() {
+        cout << "Ten sv: " << name << endl;
+        cout << "ID sv: " << ID << endl;
+        cout << "GPA sv: " << GPA << endl;
     }
 
-    void editStudent() { 
-            cout <<"Enter name Student you want to edit: ";
-                cin >> name;
-            cout <<"Enter ID Student you want to edit: ";
-                cin >> ID;
-            cout <<"Enter GPA Student you want to edit: ";
-                cin >> GPA;
+    void aStudents() {
+        cout << "Nhap vao so luong sinh vien can nhap: ";
+        cin >> numStudents;
 
-      /*  int choice;
+        Student *students = new Student[numStudents];
+
+        for (int i = 1; i < numStudents; i++) {
+            cout << "\nNhap thong tin cho sinh vien thu " << i  << ":" << endl;
+            students[i].input();
+        }
+
+        for (int i = 1; i < numStudents; i++) {
+            cout << "\nThong tin cua sinh vien thu " << i  << ":" << endl;
+            students[i].output();
+        }
+    }
+
+    void ediT() {
+        int choice;
         do {
-            cout << "\nEnter noi dung u need edit: " << endl;
-            cout << "1. Name Student" << endl;
-            cout << "2. ID Student" << endl;
-            cout << "3. GPA Student" << endl;
-            cout << "0. Exit" << endl; 
-
-            cin >> choice; 
-
-            switch (choice) {
-            case 1:
-                cout << "Enter Name Student you want to edit: ";
-                cin >> name;
-                break;
-            case 2:
-                cout << "Enter ID Student you want to edit: ";
-                cin >> ID;
-                break;
-            case 3:
-                cout << "Enter GPA Student you want to edit: ";
-                cin >> GPA;
-                break;
-            default:
-                cout << "Invalid choice! Please enter again." << endl;
-                break;
+            cout << "Chon sinh vien ma ban muon thay doi thong tin (nhap 0 de ket thuc): ";
+            cin >> choice;
+            if (choice > 0 && choice <= numStudents) {
+                cout << "Vui long thay doi thong tin sv thu " <<choice << endl;
+            } else if (choice != 0) {
+                cout << "Sinh vien khong ton tai. Vui long nhap lai." << endl;
             }
-        } while (choice != 0);*/
+        } while (choice != 0);
     }
 };
-//
-//
-//
 
-int main() { 
-    Student a;
-    a.input();
-    a.output();
-    a.editStudent();
-
+int main() {
+    Student g;
+    g.aStudents();
+    g.ediT();
     return 0;
 }
