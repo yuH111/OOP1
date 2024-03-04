@@ -34,6 +34,7 @@ public:
         this->c = c;
     }
     void input(){
+        cout <<"-------------Cube------------------" << endl;
         cout <<"Nhap a: "; 
         cin >> a;
         cout <<"Nhap b: "; 
@@ -62,6 +63,7 @@ public:
     }
 
     void input(){
+       cout <<"-------------CirCle------------------" << endl;
         cout <<"Nhap vao ban kinh: " ;
         cin >> radius;
     }
