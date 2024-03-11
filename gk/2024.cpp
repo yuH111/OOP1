@@ -6,6 +6,8 @@ using namespace std;
 class Shape {
 public:
     virtual void input() = 0;
+    virtual void  getArea() = 0;
+    virtual void getVolume() = 0;
 };
 
 class Cube : public Shape {
@@ -108,6 +110,9 @@ public:
                 cout <<"Lua chon khong hop le!" << endl;
             }
         }
+    }
+    void sort(){
+        
     }
 };
 
